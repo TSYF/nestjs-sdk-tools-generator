@@ -1,0 +1,25 @@
+{
+  "name": "@nestjs-sdk-tools/generator",
+  "version": "0.0.3",
+  "main": "dist/index.js",
+  "bin": {
+    "generate-nestjs-sdk": "dist/cli.js"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "ts-morph": "^24.0.0",
+    "@nestjs-sdk-tools/core": "workspace:*"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.4"
+  }
+}
